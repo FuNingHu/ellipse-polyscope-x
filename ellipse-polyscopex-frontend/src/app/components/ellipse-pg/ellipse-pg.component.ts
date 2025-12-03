@@ -85,7 +85,7 @@ export class EllipsePgComponent implements OnChanges, ProgramPresenter {
             console.log('Valid waypoint received, processing...');
             
             // Delete all existing child nodes first
-            await this.deleteAllChildNodes();
+            await this.deleteLastChildNodes();
             
             // Save waypoint in local variable to avoid being reset when adding nodes
             const savedWaypoint = waypoint;
@@ -283,7 +283,8 @@ export class EllipsePgComponent implements OnChanges, ProgramPresenter {
     }
 
     // Delete the last child node
-    async deleteAllChildNodes() {
+    //this function is NOT working for this moment, and need to further check.
+    async deleteLastChildNodes() {
         console.log('Remove Child Node button clicked!');
         try {
             let currentNodeId = this.presenterAPI.selectedNodeId;
