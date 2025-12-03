@@ -149,7 +149,7 @@ export class EllipsePgComponent implements OnChanges, ProgramPresenter {
         const movetonode = (await builder.createNode(NodeType.MOVE_TO)) as MoveToNode;
         const symbolService = this.presenterAPI.symbolService;
 
-        ////movetonode settings/////////////////////////
+        ////movetonode settings///////////////////////
         const waypointTabInputModel: WaypointTabInputModel = {
             frame: 'base',
             qNear: waypoint.qNear,
