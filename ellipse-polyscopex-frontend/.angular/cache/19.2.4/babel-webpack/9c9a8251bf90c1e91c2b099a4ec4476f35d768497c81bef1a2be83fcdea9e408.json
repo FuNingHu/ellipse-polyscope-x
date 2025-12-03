@@ -1,0 +1,1 @@
+{"ast":null,"code":"import WorkerContext from \"./dist/worker/index.js\";\nexport const expose = WorkerContext.expose;\nexport const registerSerializer = WorkerContext.registerSerializer;\nexport const Transfer = WorkerContext.Transfer;","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

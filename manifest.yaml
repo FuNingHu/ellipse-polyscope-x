@@ -1,0 +1,11 @@
+metadata:
+  vendorID: "funh"
+  urcapID: "ellipse-polyscopex"
+  vendorName: "funh"
+  urcapName: "Ellipse PolyScopeX"
+  version: 1.0.0
+artifacts:
+  webArchives:
+  - id: "ellipse-polyscopex-frontend"
+    folder: "ellipse-polyscopex-frontend"
+  

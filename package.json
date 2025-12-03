@@ -1,0 +1,33 @@
+{
+  "name": "ellipse-polyscopex",
+  "version": "0.0.0",
+  "scripts": {
+  "start": "npm run start --prefix ellipse-polyscopex-frontend",
+  "install-frontend": "npm install --prefix ellipse-polyscopex-frontend",
+  "lint": "npm run lint --prefix ellipse-polyscopex-frontend",
+  "build-frontend": "npm run build --prefix ellipse-polyscopex-frontend",
+  "copy-frontend": "ncp 'ellipse-polyscopex-frontend/dist' 'dist'",
+  "write-sbom": "npm run write-sbom-frontend",
+  "write-sbom-frontend": "write-ur-packages ./ellipse-polyscopex-frontend/package-lock.json dist",
+  "prebuild": "npm run clean-dist && npm run clean-target && npm run validate-manifest",
+  "build-arm": "export ARCH=linux/arm64 && npm run build",
+  "postinstall": "npm run install-frontend",
+  "build": "npm run build-frontend",
+  "prepackage": "mkdir dist && npm run copy-frontend && npm run copy-manifest && npm run copy-license && npm run write-sbom",
+  "postbuild": "npm run package",
+  "package": "package-urcap dist target",
+  "copy-manifest": "ncp 'manifest.yaml' 'dist/manifest.yaml'",
+  "copy-license": "ncp 'LICENSE' 'dist/LICENSE'",
+  "clean-dist": "rimraf dist",
+  "clean-target": "rimraf target",
+  "install-urcap": "install-urcap 'target/ellipse-polyscopex*.urcapx' '../manifest-spec-19.6.12.json'",
+  "delete-urcap": "delete-urcap funh ellipse-polyscopex",
+  "validate-manifest": "validate-manifest 'manifest.yaml' '../manifest-spec-19.6.12.json'"
+},
+  "private": true,
+  "devDependencies": {
+  "@universal-robots/urcap-utils": "1.6.4",
+  "ncp": "2.0.0",
+  "rimraf": "5.0.7"
+  }
+}

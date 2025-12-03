@@ -1,0 +1,12 @@
+{
+  "bomFormat": "Universal Robots",
+  "components": {
+    "@universal-robots/contribution-api": "48.4.1",
+    "@universal-robots/designtokens": "0.17.0",
+    "@universal-robots/ros2-interfaces": "4.0.5",
+    "@universal-robots/ui-angular-components": "4.1.0",
+    "@universal-robots/ui-models": "0.34.0",
+    "@universal-robots/urcap-utils": "1.6.4",
+    "@universal-robots/utilities-units": "5.12.0"
+  }
+}

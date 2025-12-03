@@ -1,0 +1,16 @@
+
+{
+  "applicationNodes": [],
+  "programNodes": [
+    {
+      "excludeFromToolbox": false,
+      "translationPath": "assets/i18n/",
+      "iconURI": "assets/icons/ellipse-polyscopex.svg",
+      "behaviorURI": "ellipse-pg.worker.js",
+      "presenterURI": "main.js",
+      "componentTagName": "funh-ellipse-polyscopex-ellipse-pg"
+    }],
+  "smartSkills": [],
+  "sidebarItems": [],
+  "operatorScreens": []
+}

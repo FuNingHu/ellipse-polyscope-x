@@ -1,0 +1,34 @@
+@if (contributedNode) {
+    <div class="inline-component">
+        <ur-title 
+            [text]="'program.tree.nodes.description' | translate"
+            [type]="'subheading'"
+            [weight]="'default'"></ur-title>
+        <ur-button
+            (handleClick)="onEditButtonClick()"
+            type="cta"
+            [disabled]="false"
+            icon="record"
+            iconAlign="left"
+            [active]="false">Edit Center</ur-button>
+            
+        
+
+        <ur-button
+            (handleClick)="onMoveHereButtonClick()"
+            type="filled"
+            [disabled]="contributedNode.parameters.waypoint.pose.position[0]===0"
+            icon="manual"
+            iconAlign="left"
+            [active]="false">Move Here</ur-button>
+
+        <ur-button
+            (handleClick)="deleteAllChildNodes()"
+            type="filled"
+            [disabled]="false"
+            icon="manual"
+            iconAlign="left"
+            [active]="false">Remove Child Node</ur-button>
+            
+    </div>
+}
